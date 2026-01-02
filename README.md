@@ -61,22 +61,34 @@ bus-buddy-main/
 └── README.md                    # Project documentation
 
 🚀 How to Run the Project
+
 1️⃣ Clone the Repository
+
 git clone https://github.com/owais1724/bus-buddy.git
+
 cd bus-buddy
+
 2️⃣ Create Virtual Environment (Python 3.11 recommended)
+
 python -m venv venv
+
 venv\Scripts\activate
+
 3️⃣ Install Dependencies
+
 pip install tensorflow==2.15.0 numpy==1.26.4 scikit-learn==1.5.2 flask pandas nltk fuzzywuzzy python-Levenshtein
+
 4️⃣ Download NLTK Data (first time only)
+
 import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+
 5️⃣ Train Chatbot Model (Optional – if model not present)
 python train_chatbot.py
 6️⃣ Run the Application
+
 python chatbot.py
 Open your browser and visit:
 
