@@ -1,4 +1,5 @@
 🚍 BusBuddy – Smart Bus Assistant Chatbot
+
 BusBuddy is an intelligent bus assistant chatbot that helps users with bus fare queries, route availability, and general transport-related questions.
 It uses Natural Language Processing (NLP), Machine Learning, and Flask to provide accurate and user-friendly responses through a web interface.
 
@@ -32,20 +33,33 @@ Frontend: HTML, CSS, JavaScript
 
 📂 Project Structure
 bus-buddy-main/
+
 │
-├── chatbot.py                  # Main Flask application
+├── chatbot.py  # Main Flask application
+
 ├── train_chatbot.py             # Chatbot training script
+
 ├── intents.json                 # Chatbot intents & responses
+
 ├── chatbot_model.keras          # Trained chatbot model
+
 ├── words.pkl                    # NLP vocabulary
+
 ├── classes.pkl                  # Intent classes
+
 ├── fare_prediction_model.pkl    # Fare prediction ML model
+
 ├── surat_bus.csv                # Bus route data
+
 ├── SURAT5.csv                   # Fare dataset
+
 ├── templates/
 │   └── index.html               # Chat UI
+
 ├── requirements.txt             # Project dependencies
+
 └── README.md                    # Project documentation
+
 🚀 How to Run the Project
 1️⃣ Clone the Repository
 git clone https://github.com/owais1724/bus-buddy.git
@@ -116,7 +130,6 @@ Multi-city support
 👨‍💻 Authors
 Syed Owais
 
-Team Members
 
 📜 License
 This project is for educational purposes only.
