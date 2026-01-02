@@ -1,58 +1,123 @@
-# 🚌 Bus Buddy - Smart Bus Route Assistance for Surat City
+🚍 BusBuddy – Smart Bus Assistant Chatbot
+BusBuddy is an intelligent bus assistant chatbot that helps users with bus fare queries, route availability, and general transport-related questions.
+It uses Natural Language Processing (NLP), Machine Learning, and Flask to provide accurate and user-friendly responses through a web interface.
 
-Bus Buddy is an AI-powered chatbot application designed to help commuters in Surat plan efficient and affordable bus journeys. It offers real-time route planning, fare estimation, and transit suggestions based on user input.
+✨ Features
+🤖 Chatbot Interface for natural language queries
 
----
+💰 Bus Fare Prediction (Adult & Child fares)
 
-## 🚀 Features
+🚌 Route Availability & Direct Bus Detection
 
-- 🔍 **Route Planning**: Suggests optimal bus routes from source to destination.
-- 💱 **Fare Calculation**: Estimates total fare based on route and transfers.
-- 🔄 **Transfer Suggestions**: Informs about possible bus transfers to complete a journey.
-- 💬 **Interactive Chatbot**: Uses NLP to interact with users and understand location queries.
+🔁 Transfer Route Suggestions
 
----
+🔍 Fuzzy Matching for stop name errors
 
+🌐 Web-based UI using Flask & HTML
 
----
+⚡ Upgraded to Python 3.11 & TensorFlow 2.15
 
-## 🧠 Technologies Used
+🛠️ Tech Stack
+Backend: Python, Flask
 
-- **Python** – Core logic and data processing
-- **Pandas** – Data handling and analysis
-- **NLTK** – Natural Language Processing for chatbot input
-- **Jupyter Notebook** – Prototyping and logic testing
-- **CSV** – Bus data storage
+Machine Learning: TensorFlow (Keras), Scikit-learn
 
----
+NLP: NLTK
 
-## 📊 Dataset
+Data Handling: Pandas, NumPy
 
-- `surat_bus.csv` contains structured information about Surat city’s bus routes, including:
-  - Route number
-  - Stop names
-  - Timings
-  - Fare details (if available)
+Matching: FuzzyWuzzy
 
----
+Frontend: HTML, CSS, JavaScript
 
-## 💻 How to Run
+📂 Project Structure
+bus-buddy-main/
+│
+├── chatbot.py                  # Main Flask application
+├── train_chatbot.py             # Chatbot training script
+├── intents.json                 # Chatbot intents & responses
+├── chatbot_model.keras          # Trained chatbot model
+├── words.pkl                    # NLP vocabulary
+├── classes.pkl                  # Intent classes
+├── fare_prediction_model.pkl    # Fare prediction ML model
+├── surat_bus.csv                # Bus route data
+├── SURAT5.csv                   # Fare dataset
+├── templates/
+│   └── index.html               # Chat UI
+├── requirements.txt             # Project dependencies
+└── README.md                    # Project documentation
+🚀 How to Run the Project
+1️⃣ Clone the Repository
+git clone https://github.com/owais1724/bus-buddy.git
+cd bus-buddy
+2️⃣ Create Virtual Environment (Python 3.11 recommended)
+python -m venv venv
+venv\Scripts\activate
+3️⃣ Install Dependencies
+pip install tensorflow==2.15.0 numpy==1.26.4 scikit-learn==1.5.2 flask pandas nltk fuzzywuzzy python-Levenshtein
+4️⃣ Download NLTK Data (first time only)
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+5️⃣ Train Chatbot Model (Optional – if model not present)
+python train_chatbot.py
+6️⃣ Run the Application
+python chatbot.py
+Open your browser and visit:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Vishishta17/Bus-Buddy.git
-   cd Bus-Buddy
-Launch Jupyter Notebooks:
+http://127.0.0.1:5000/
+💬 Example Queries
+Hi
 
-jupyter notebook
-Open and run fare.ipynb or route.ipynb to test features.
+Fare from Adajan to Vesu
 
-📈 Future Improvements
-Integrate live GPS tracking for dynamic bus updates
+Which bus goes from Citylight to Udhna
 
-Deploy chatbot on web (using Flask or Streamlit)
+Bus route from Katargam to Varachha
 
-Add multilingual support
+Thanks
 
-Expand to support other cities
+🧠 How It Works
+User enters a message through the web UI
+
+NLP preprocessing converts text into numerical features
+
+Trained ML model predicts the intent
+
+Fare & route logic is applied if required
+
+Bot responds with accurate information
+
+🎓 Academic Relevance
+This project demonstrates:
+
+NLP-based chatbot design
+
+ML model deployment
+
+Real-world data handling
+
+Flask-based web integration
+
+✅ Suitable for Final Year Project / Mini Project
+
+🔮 Future Enhancements
+Real-time bus tracking
+
+Database integration
+
+Voice-based interaction
+
+Mobile application version
+
+Multi-city support
+
+👨‍💻 Authors
+Syed Owais
+
+Team Members
+
+📜 License
+This project is for educational purposes only.
 
